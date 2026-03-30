@@ -2,7 +2,8 @@
 
 ### Install
 
-## Install [rustup](rustup.rs)
+## Install [rustup](https://rustup.rs)
+## Install [treesitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 
 ## Install neovim
 ```sh
@@ -14,7 +15,7 @@ sudo apt install\
     gzip tar unzip\
     ripgrep fd-find\
     xclip\
-    gcc g++ make\
+    gcc g++ make clang\
     python3-full python3-venv python3-pynvim\
     nodejs node-typescript npm\
     neovim
