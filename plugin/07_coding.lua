@@ -17,6 +17,7 @@ require("blink.cmp").setup({
     default = { "lsp", "path", "snippets", "buffer" },
   },
   fuzzy = { implementation = "prefer_rust_with_warning" },
+  cmdline = { enabled = false },
 })
 require("conform").setup({
   formatters_by_ft = {
