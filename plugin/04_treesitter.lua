@@ -20,8 +20,9 @@ require("nvim-treesitter-textobjects").setup({
   select = {
     lookahead = true,
     selection_modes = {
-      ["@class.outer"] = "V",
       ["@function.outer"] = "V",
+      ["@class.outer"] = "V",
+      ["@call.outer"] = "V",
       ["@conditional.outer"] = "V",
       ["@loop.outer"] = "V",
     },
@@ -29,9 +30,9 @@ require("nvim-treesitter-textobjects").setup({
   },
 })
 local map = function(km, ex)
-  vim.keymap.set("n", km, function()
+  vim.keymap.set({ "x", "o" }, km, function()
     require("nvim-treesitter-textobjects.select").select_textobject(ex, "textobjects")
-  end, { silent = true })
+  end)
 end
 
 map("af", "@function.outer")

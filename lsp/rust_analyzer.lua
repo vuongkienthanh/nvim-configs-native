@@ -1,4 +1,4 @@
-vim.lsp.config("rust_analyzer", {
+return {
   settings = {
     ["rust-analyzer"] = {
       cargo = {
@@ -9,4 +9,4 @@ vim.lsp.config("rust_analyzer", {
       },
     },
   },
-})
+}

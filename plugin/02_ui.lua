@@ -1,5 +1,6 @@
 vim.pack.add({ "https://github.com/rebelot/kanagawa.nvim" })
 vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd("hi Visual guibg=#001591 guifg=#DDDDDD")
 
 vim.pack.add({ { src = "https://github.com/lukas-reineke/indent-blankline.nvim", name = "ibl" } })
 require("ibl").setup()
