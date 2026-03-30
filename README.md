@@ -2,8 +2,8 @@
 
 ### Install
 
-## Install [rustup](https://rustup.rs)
-## Install [treesitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
+## Install [rustup]( https://rustup.rs )
+## Install [treesitter-cli]( https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md )
 
 ## Install neovim
 ```sh
@@ -25,4 +25,10 @@ sudo apt install\
 ## Clone this repo
 ```
 git clone git@github.com:vuongkienthanh/nvim-configs-linux.git ~/.config/nvim
+```
+
+
+## Build Treesitter
+```sh
+nvim --headless '+lua vim.cmd("TSInstall python lua rust html css javascript typescript json toml")' +qa
 ```

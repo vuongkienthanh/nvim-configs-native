@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 local map = function(mode, km, ex)
-    vim.keymap.set(mode, km, ex, { silent = true })
+  vim.keymap.set(mode, km, ex, { silent = true })
 end
 
 -- quicker window moving
