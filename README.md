@@ -4,6 +4,10 @@
 
 ## Install [rustup]( https://rustup.rs )
 ## Install [treesitter-cli]( https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md )
+## For wsl:
+```sh
+winget install win32yank
+```
 
 ## Install neovim
 ```sh
