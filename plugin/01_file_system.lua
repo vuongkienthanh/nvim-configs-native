@@ -5,3 +5,8 @@ vim.pack.add({
   },
 })
 vim.keymap.set("n", "<leader><tab>", ":Neotree toggle<CR>")
+require("neo-tree").setup({
+  filesystem = {
+    hijack_netrw_behavior = "open_default", 
+  }
+})
