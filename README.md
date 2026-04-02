@@ -3,7 +3,8 @@
 ### Install
 
 ## Install [rustup]( https://rustup.rs )
-## For wsl/windows:
+## Install [tree-sitter-cli]( https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md )
+## For wsl/windows, install `win32yank`:
 ```sh
 winget install win32yank
 ```
@@ -18,10 +19,9 @@ sudo apt install\
     gzip tar unzip\
     ripgrep fd-find\
     xclip\
-    gcc g++ make\
+    gcc g++ make clang\
     python3-full python3-venv python3-pynvim\
     nodejs node-typescript npm\
-    tree-sitter-cli\
     neovim
 ```
 

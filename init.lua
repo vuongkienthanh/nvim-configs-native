@@ -3,6 +3,8 @@ require("keymaps")
 require("my_fn")
 
 vim.g.python3_host_prog = "/usr/bin/python3"
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 if vim.fn.has("wsl") then
   vim.g.clipboard = {
