@@ -22,12 +22,9 @@ require("nvim-treesitter-textobjects").setup({
 -- Disable entire built-in ftplugin mappings to avoid conflicts.
 vim.g.no_plugin_maps = true
 local map = function(km, ex)
-  vim.keymap.set(
-    { "x", "o" },
-    km,
-    function() require("nvim-treesitter-textobjects.select").select_textobject(ex, "textobjects") end, 
-    { buffer = true },
-  )
+  vim.keymap.set({ "x", "o" }, km, function()
+    require("nvim-treesitter-textobjects.select").select_textobject(ex, "textobjects")
+  end, { buffer = true })
 end
 
 -- features
@@ -49,3 +46,4 @@ vim.api.nvim_create_autocmd("FileType", {
     map("il", "@loop.inner")
   end,
 })
+

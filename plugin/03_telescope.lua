@@ -1,5 +1,5 @@
 vim.pack.add({
-  { src = "https://github.com/nvim-telescope/telescope.nvim", version = vim.version.range("*") },
+  { src = "https://github.com/nvim-telescope/telescope.nvim", version = "master" },
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
 })
 
