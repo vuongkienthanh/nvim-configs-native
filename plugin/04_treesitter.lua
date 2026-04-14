@@ -3,7 +3,25 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
 })
 
-require("tree-sitter-manager").setup()
+local ensure_install = {
+  "rust",
+  "python",
+  "html",
+  "css",
+  "javascript",
+  "typescript",
+  "toml",
+  "json",
+}
+
+require("tree-sitter-manager").setup({
+  ensure_install = ensure_install,
+})
+
+-- text obj
+-- Disable entire built-in ftplugin mappings to avoid conflicts.
+vim.g.no_plugin_maps = true
+-- setup
 require("nvim-treesitter-textobjects").setup({
   select = {
     lookahead = true,
@@ -17,22 +35,15 @@ require("nvim-treesitter-textobjects").setup({
     include_surrounding_whitespace = false,
   },
 })
-
--- text obj
--- Disable entire built-in ftplugin mappings to avoid conflicts.
-vim.g.no_plugin_maps = true
+-- buffer keymap
 local map = function(km, ex)
   vim.keymap.set({ "x", "o" }, km, function()
     require("nvim-treesitter-textobjects.select").select_textobject(ex, "textobjects")
   end, { buffer = true })
 end
-
--- features
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua", "python", "rust", "html", "css", "javascript", "typescript", "json", "toml" },
+  pattern = ensure_install,
   callback = function()
-    -- highlighting
-    vim.treesitter.start()
     -- text obj
     map("af", "@function.outer")
     map("if", "@function.inner")
@@ -46,4 +57,3 @@ vim.api.nvim_create_autocmd("FileType", {
     map("il", "@loop.inner")
   end,
 })
-
