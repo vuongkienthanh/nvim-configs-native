@@ -6,7 +6,7 @@ vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "win32yank-wsl",
     copy = {
