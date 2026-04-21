@@ -3,7 +3,7 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects", version = "main" },
 })
 
-local ensure_install = {
+local ensure_installed = {
   "rust",
   "python",
   "html",
@@ -12,10 +12,11 @@ local ensure_install = {
   "typescript",
   "toml",
   "json",
+  "sql",
 }
 
 require("tree-sitter-manager").setup({
-  ensure_install = ensure_install,
+  ensure_installed = ensure_installed,
 })
 
 -- text obj
@@ -42,7 +43,7 @@ local map = function(km, ex)
   end, { buffer = true })
 end
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = ensure_install,
+  pattern = ensure_installed,
   callback = function()
     -- text obj
     map("af", "@function.outer")
