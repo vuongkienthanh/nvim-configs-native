@@ -30,9 +30,3 @@ sudo apt install\
 ```
 git clone git@github.com:vuongkienthanh/nvim-configs-linux.git ~/.config/nvim
 ```
-
-
-## Build Treesitter
-```sh
-nvim --headless '+lua vim.cmd("TSInstall python lua rust html css javascript typescript json toml")' +qa
-```

@@ -12,6 +12,7 @@ set.showmode = false
 set.cmdheight = 2
 set.hidden = true
 set.cursorline = true
+set.fixendofline = true
 set.shortmess:append("c")
 set.encoding = "utf-8"
 set.termguicolors = true
