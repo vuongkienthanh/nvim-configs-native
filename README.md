@@ -26,10 +26,10 @@ sudo apt install\
     neovim
 
 # setup git config
-git config --global core.autocrlf=input
-git config --global core.editor=nvim
-git config --global pull.rebase=false
-git config --global commit.verbose=true
+git config --global core.autocrlf input
+git config --global core.editor "nvim --clean"
+git config --global pull.rebase false
+git config --global commit.verbose true
 ```
 
 - Config your ID in `git`
