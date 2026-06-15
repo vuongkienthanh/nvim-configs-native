@@ -1,4 +1,6 @@
-# IDE neovim config on Ubuntu/WSL
+# IDE neovim config
+
+# On Ubuntu/WSL
 
 ### Set up dev environment
 
@@ -26,16 +28,47 @@ sudo apt install\
     neovim
 
 # setup git config
+```sh
+git config --global user.name=example
+git config --global user.email=example@abc.com
 git config --global core.autocrlf input
 git config --global core.editor "nvim --clean"
 git config --global pull.rebase false
 git config --global commit.verbose true
 ```
 
-- Config your ID in `git`
+## Clone this repo in ~/.config/nvim
+
+# On Windows
+
 ```sh
-git config --global user.name=example
-git config --global user.email=example@abc.com
+winget install git
+winget install wget
+winget install BurntSushi.ripgrep.MSVC
+winget install sharkdp.fd
+winget install tree-sitter-cli
+winget install cmake
+winget install 7zip.7zip
+winget install GnuWin32.Gzip
+winget install GnuWin32.UnZip
+winget install MartinStorsjo.LLVM-MinGW.MSVCRT
+
+winget install python3
+pip install pynvim
+winget install nodejs
+npm install -g typescript
+
+winget install neovim
 ```
 
-## Clone this repo in ~/.config/nvim
+# setup git config
+```
+git config --global user.name=example
+git config --global user.email=example@abc.com
+git config --global core.autocrlf true
+git config --global core.editor "nvim --clean"
+git config --global pull.rebase false
+git config --global commit.verbose true
+```
+
+## Clone this repo in C:\Users\{username}\AppData\Local\nvim
